@@ -1,5 +1,4 @@
 # OmniHub---The-Super-App
-# OmniHub – The Super App
 
 OmniHub is a modern web application built using TypeScript and JavaScript technologies.  
 This project is used to practice **end-to-end DevOps workflows** including Dockerization and CI/CD automation.
