@@ -30,4 +30,14 @@ This project is ideal for **DevOps fresher-level hands-on practice**.
 ---
 
 ## 📁 Project Structure
+OmniHub---The-Super-App/
+│
+├── src/ # Application source code
+├── public/ # Static assets
+├── Dockerfile # Docker build instructions
+├── Jenkinsfile # CI/CD pipeline definition
+├── nginx.conf # NGINX configuration
+├── package.json # Project dependencies
+├── tsconfig.json # TypeScript configuration
+└── README.md
 
