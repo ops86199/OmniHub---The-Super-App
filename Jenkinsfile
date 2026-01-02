@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sh ''' 
                   docker rmi $DOCKER_USER/omnihub-app:latest || true 
-                  docker build -t omnihub-app:latest .
+                  docker build -t &DOCKER_USER/omnihub-app:latest .
                 '''
             }
         }
