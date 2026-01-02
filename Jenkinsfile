@@ -17,8 +17,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh ''' 
-                  docker rmi $DOCKER_USER/omnihub-app:latest || true 
-                  docker build -t &DOCKER_USER/omnihub-app:latest .
+                  docker rmi OPS86199/omnihub-app:latest || true 
+                  docker build -t OPS86199/omnihub-app:latest .
                 '''
             }
         }
@@ -35,7 +35,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        docker push $DOCKER_USER/ominhub:latest
+                        docker push OPS86199/ominhub:latest
                     '''
                 }
             }
