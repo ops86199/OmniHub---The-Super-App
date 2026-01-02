@@ -3,21 +3,21 @@ pipeline {
 
     environment {
         IMAGE_NAME = "omnihub-app"
-        DOCKERHUB_REPO = "yourdockerhubusername/omnihub-app" // Replace with your Docker Hub repo
+        DOCKERHUB_REPO = "ops86199/omnihub-app" // Replace with your Docker Hub repo
     }
 
     stages {
 
         stage('Checkout Code') {
             steps {
-                checkout scm
+                 git url: 'https://github.com/ops86199/OmniHub---The-Super-App.git', branch:'main'
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("${IMAGE_NAME}:latest")
+                    docker.build("${omnihub-app}:latest")
                 }
             }
         }
@@ -34,8 +34,8 @@ pipeline {
             steps {
                 script {
                     sh """
-                        docker tag ${IMAGE_NAME}:latest ${DOCKERHUB_REPO}:latest
-                        docker push ${DOCKERHUB_REPO}:latest
+                        docker tag ${omnihub-app}:latest ${ops86199}:latest
+                        docker push ${ops86199}:latest
                     """
                 }
             }
