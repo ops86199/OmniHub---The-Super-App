@@ -35,7 +35,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        docker push OPS86199/ominhub:latest
+                        docker push ops86199/ominhub:latest
                     '''
                 }
             }
