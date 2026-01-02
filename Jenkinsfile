@@ -34,10 +34,9 @@ pipeline {
         stage('Push Docker Image to Docker Hub') {
             steps {
                 script {
-                    sh """
-                        docker tag ${omnihub-app}:latest ${ops86199}:latest
-                        docker push ${ops86199}:latest
-                    """
+                    sh '''
+                        docker push $DOCKER_USER/ominhub:latest
+                    '''
                 }
             }
         }
