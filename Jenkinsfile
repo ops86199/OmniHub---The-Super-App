@@ -16,9 +16,8 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    docker.build("${omnihub-app}:latest")
-                }
+                sh" docker build -t omnihub-app:latest .
+                
             }
         }
 
