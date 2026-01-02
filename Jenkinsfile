@@ -16,9 +16,10 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t omnihub-app:latest .
-                    docker rmi omnihub-app:latest
-                   "
+                sh ''' 
+                  docker rmi $DOCKER_USER/omnihub-app:latest || true 
+                  docker build -t omnihub-app:latest .
+                '''
             }
         }
 
